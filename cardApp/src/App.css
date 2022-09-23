@@ -1,0 +1,9 @@
+.card-application{
+  height:600px;
+  display: flex;
+}
+.main-content{
+  width: 80%;
+  height: 100%;
+  border: 1px solid black;
+}
