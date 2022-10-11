@@ -5,7 +5,8 @@ import Main from "./components/Main/Main";
 import { generateUniqueNumber } from "./generateUniqueNumber";
 
 import "./App.css";
-import { useState } from "react";
+import { useState,useReducer } from "react";
+import { createContext } from "react";
 
 const light = {
   backgroundColor : "white"
@@ -13,28 +14,35 @@ const light = {
 const dark = {
   backgroundColor : "#555464",
 }
-function App() {
-  const [cards, setCards] = useState([]);
-  const [screenMode,setScreenMode] = useState(light);
-  const addButton = () => {
-    setCards([
-      ...cards,
+function reducer(state,action){
+  if(action.type == "sort"){
+    return [...state.sort(function(a,b){
+      return a.number - b.number
+    })]
+  }else if(action.type == "add"){
+    return [
+      ...state,
       {
         number: generateUniqueNumber(),
         key: new Date() * Math.random(),
       },
-    ]);
+    ]
+  }else if(action.type == "delete"){
+    return state.filter((card) => card.number !== action.payload.number)
+  }
+}
+export const CardContext = createContext();
+function App() {
+  const [cards, dispatch] = useReducer(reducer, []);
+  const [screenMode,setScreenMode] = useState(light);
+  const addButton = () => {
+    dispatch({type:"add"})
   };
   const sortCard = () => {
-    console.log(cards.sort(function(a,b){
-      return a.number - b.number
-    }));
-    setCards([...cards.sort(function(a,b){
-      return a.number - b.number
-    })])
+    dispatch({type:"sort"})
   };
   const deleteCard = (number) => {
-    setCards(cards.filter((card) => card.number !== number));
+    dispatch({type:"delete",payload : {number:number}})
   };
 
   const darkMode = ()=>{
@@ -47,8 +55,10 @@ function App() {
     <div className="card-application" style={screenMode}>
       <div className="main-content">
         <Header addButton={addButton} sortCard={sortCard} cards={cards}/>
-        <Main cards={cards} deleteCard={deleteCard} />
-        <Footer />
+        <CardContext.Provider value={deleteCard}>
+          <Main cards={cards} />
+        </CardContext.Provider>
+        <Footer/>
       </div>
       <Aside darkMode={darkMode} lightMode = {lightMode}/>
     </div>

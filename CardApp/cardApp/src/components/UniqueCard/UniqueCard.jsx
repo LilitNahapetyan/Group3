@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { CardContext } from "../../App";
 import "./UniqueCard.css";
 
-function UniqueCard({ card, deleteCard }) {
+function UniqueCard({ card}) {
+  const deleteCard = useContext(CardContext);
   return (
     <div className="unique-card">
       {card.number}

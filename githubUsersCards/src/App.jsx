@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import CardContainner from "./components/CardContainer";
 import "./App.css";
 
+
 function App() {
   const [users, setUsers] = useState([]);
   const [staticUsers,setStaticUsers] = useState([]);
   const [inputValue, setInputValue] = useState("");
-
+ 
   useEffect(() => {
     fetch("https://api.github.com/users")
       .then((responce) => responce.json())
@@ -24,6 +25,7 @@ function App() {
       setUsers(staticUsers)
     }
   },[inputValue])
+
 
   const inputChangeHandler = (value) => {
     setInputValue(value);
