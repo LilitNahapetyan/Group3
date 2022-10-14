@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 import DoneTodos from "./DoneTodos/DoneTodos";
-import "./App.css";
 import Todos from "./Todos";
+import "./App.css";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -29,7 +29,7 @@ function App() {
   };
 
   const deleteLi = (todo) => {
-    setDoneTodos([...doneTodos,todo])
+    setDoneTodos([...doneTodos,todo]);
     dispatch({ type: "deleteLi", payload: { id: todo.id} });
   };
   return (

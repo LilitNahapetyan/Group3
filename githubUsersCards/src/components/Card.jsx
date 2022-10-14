@@ -6,19 +6,15 @@ import { useCallback, useState } from "react";
 //   backgroundColor : "rgb(30, 109, 135)"
 // }
 
-function Card({ id, login, avatar_url, deleteButton }) {
+function Card({ id, login, avatar_url}) {
   const [clicked, setClicked] = useState(false);
-const[hi,setHi] = useState(true);
 
+  console.log("hi");
   const selectUser = () => {
     setClicked(!clicked);
   };
 
-  const handleSelectUser = () => {
-    console.log("hi "+id);
-  }
-  handleSelectUser();
-  //   const [screenMode,setScreenMode] = useState(dark);
+    //   const [screenMode,setScreenMode] = useState(dark);
 
   // const setScreenModeHandler = ()=>{
   //   if(screenMode == dark){
@@ -31,7 +27,7 @@ const[hi,setHi] = useState(true);
 
   return (
     <div className={`card ${clicked ? "clicked" : ""}`}>
-      <button onClick={() => deleteButton(id)}>X</button>
+      <button>X</button>
       <div className="card-img">
         <img src={avatar_url} className="card-img" />
       </div>

@@ -1,4 +1,4 @@
-import UniqueCard from "../UniqueCard/UniqueCard";
+import UniqueCard from "../UniqueCard/UniqueCard";z
 import "./Main.css";
 
 function Main({cards}) {
