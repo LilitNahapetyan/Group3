@@ -16,7 +16,6 @@ function Products() {
       {products.map((product) => (
         <div key={product.id}><Link to = {`/products/${product.id}`}>{product.title}</Link></div>
       ))}
-      <Link to="/">go to Home</Link>
     </div>
   );
 }
