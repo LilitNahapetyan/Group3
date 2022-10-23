@@ -1,0 +1,32 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.header-container{
+  height: 80px;
+  background-color: darkblue;
+}
+
+.footer-container{
+  height: 100px;
+  background-color: rgb(84, 84, 216);
+  font-size: 20px;
+  padding:40px
+}
+
+.home-container{
+  height: 700px;
+  background-color:cornsilk;
+}
+
+.books-container{
+  height: 700px;
+  background-color:cornsilk;
+}
+
+.link{
+  color: aliceblue;
+  margin:20px;
+}
