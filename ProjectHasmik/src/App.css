@@ -1,0 +1,305 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #73d700;
+    width: 100%;
+    height: 70px;
+    padding-top: 10px;
+}
+
+.name {
+    padding-left: 100px;
+    font-family: fantasy;
+    font-size: 50px;
+    color: rgb(7, 60, 11);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    justify-content: space-around;
+    color: #73d700;
+}
+
+.body-image {
+    width: 100%;
+    height: 800px;
+    background-image: url("carousel-1.jpg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+
+}
+.body-image1{
+    width: 100%;
+    height: 800px;
+    background-image: url("carousel-2.jpg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.button {
+    position: relative;
+    border-radius: 15px;
+    width: 120px;
+    height: 50px;
+    background-color: greenyellow;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+.top {
+    padding: 70px;
+    width: 600px;
+    height: 250px;
+    font-size: 70px;
+    color: rgb(28, 150, 91);
+}
+
+.imgText {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+    width: 100%;
+}
+
+.img1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+    width: 300px;
+    background-image: url("about.jpg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgText2 {
+    width: 300px;
+    height: 400px;
+    font-size: 20px;
+    color: green;
+}
+
+.Read {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: yellow;
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(207, 245, 124);
+    width: 250px;
+    height: 380px;
+    border-radius: 10px;
+    border: 1 px solid black;
+    background-size: cover;
+}
+
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    max-height: 800px;
+}
+
+.card-image {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    background-image: url("product-1.jpg");
+    background-size: cover;
+}
+
+.imgbutton {
+    border-color: black;
+    color: white;
+    margin-left: 10px;
+    position: relative;
+    top: 50px;
+    background-color: red;
+    height: 30px;
+    width: 40px;
+}
+
+.products-search {
+    width: 100%;
+    height: 70px;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: left;
+}
+
+.input {
+    background-color: rgb(131, 243, 163);
+    border-radius: 10px;
+    border-color: hsl(88, 100%, 42%);
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    left: 50%;
+    margin: 5px;
+    background-color: rgb(131, 243, 163);
+    color: azure;
+    font-size: 15px;
+}
+
+.card-button {
+    margin-left: 15px;
+    background-color: rgb(144, 214, 226);
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.filter {
+    background-color: rgb(131, 243, 163);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: brown;
+    background-color: rgb(131, 243, 163);
+    margin: 10px;
+    color: azure;
+}
+
+.visit {
+    background-color: greenyellow;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.visit-text {
+    width: 50%;
+    font-size: 25px;
+    color: #73d700;
+    padding: 20px;
+
+}
+
+.visitButton {
+    width: 150px;
+    height: 40px;
+    background-color: #73d700;
+    color: blanchedalmond;
+    border-radius: 15px;
+    margin-top: 150px;
+}
+
+.footer {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #666;
+}
+
+.text1 {
+    
+    width: 350px;
+    height: 300px;
+
+}
+.aboutus{
+   margin-bottom: 100px;
+    width: 700px;
+   display: flex;
+    font-size: 55px;
+    color: rgb(152, 206, 27);
+    align-items: center;
+    position: relative;
+    top: 150px;
+}
+.Fruits{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.fruit{
+    margin:20px;
+    padding: 30px;
+    width: 200px;
+    height: 300px;
+    align-items: center;
+    background-color:white;
+    border-radius: 15px;
+    border:3px solid #73d700;
+}
+.btnAdd{
+    width: 160px;
+    height: 40px;
+    background-color:#73d700;
+    border-radius: 15px;
+    color: #666;
+}
+.cardname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #73d700;
+}
+.searchbtn{
+display: flex;
+justify-content:center;
+margin-top: 30px;
+}
+.searchbutton{
+    width: 90px;
+    height: 40px;
+    background-color: #73d700;
+    border-color: #666;
+    color: aliceblue;
+    font-size: 25px;
+    border-radius: 15px;
+}
+.searchinput{
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 15px;
+    border-color: #666;
+}
+.Fresh{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+.cart{
+    height: 100%;
+background-image: url("icon.png");
+overflow: hidden;
+background-repeat: no-repeat;
+align-items: center;
+margin-left: 10px;
+}
